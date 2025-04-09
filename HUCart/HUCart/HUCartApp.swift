@@ -1,14 +1,14 @@
 //
-//  HU_ProjectApp.swift
-//  HU Project
+//  HUCartApp.swift
+//  HUCart
 //
-//  Created by Michael Amoo on 4/8/25.
+//  Created by Michael Amoo on 4/9/25.
 //
 
 import SwiftUI
 
 @main
-struct HU_ProjectApp: App {
+struct HUCartApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

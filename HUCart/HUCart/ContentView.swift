@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  HU Project
+//  HUCart
 //
-//  Created by Michael Amoo on 4/8/25.
+//  Created by Michael Amoo on 4/9/25.
 //
 
 import SwiftUI
