@@ -18,7 +18,7 @@ This project was created as a proof of concept for a larger shopping application
 - Quantity selection before adding products to the cart
 - Cart totals and item-count tracking
 - Simulated checkout
-- Local order history
+- Local order history 
 - Store switching with cart reset
 - Custom tab navigation for Home, Cart, Account, and Stores
 
