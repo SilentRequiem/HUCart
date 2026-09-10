@@ -1,94 +1,101 @@
+# HUCart iOS Prototype
 
+HUCart is a student-focused iOS shopping prototype built with Swift and SwiftUI. It simulates a multi-store shopping experience where users can sign in, select a store, browse products, manage a cart, complete a simulated checkout, and view local order history.
+
+This project was created as a proof of concept for a larger shopping application. Store information, product data, account data, and orders are handled locally in the app rather than through external retailer APIs, a backend, or a production authentication system.
 
 ## Presentation
-https://tinyurl.com/HamCart
 
-Mirror: https://tinyurl.com/Hucart2
+- https://tinyurl.com/HamCart
+- Mirror: https://tinyurl.com/Hucart2
 
-# HUCart iOS Application
+## Features
 
-HUCart is an iOS application designed to help students browse and purchase items from different stores through a simple and user-friendly interface. The app focuses on smooth navigation, clear structure, and efficient state management across views.
+- Animated splash screen
+- Local login and account creation flow
+- Store selection between sample retailers
+- Store-specific product categories and product detail views
+- Quantity selection before adding products to the cart
+- Cart totals and item-count tracking
+- Simulated checkout
+- Local order history
+- Store switching with cart reset
+- Custom tab navigation for Home, Cart, Account, and Stores
 
----
+## Technologies
 
-## Overview
+- Swift
+- SwiftUI
+- Xcode
 
-This project was built to simulate a student-focused shopping experience. Users can log in, choose a store, browse items, and manage their cart, all within a clean and responsive interface.
+## SwiftUI Concepts Used
 
-The main goal was to create a functional and organized app while maintaining a smooth user experience.
+HUCart uses SwiftUI state management to share and update data across multiple views.
 
----
+- `@State` for local view state
+- `@StateObject` and `ObservableObject` for shared managers
+- `@EnvironmentObject` for passing cart data between views
+- `@Binding` for shared selections between parent and child views
+- `@Published` for cart items, quantities, and order history
+- `UUID` and `Identifiable` for model identifiers
+- `NavigationStack` and `NavigationLink` for navigation
 
-## Key Features
+## App Structure
 
-- User login system  
-- Store selection interface  
-- Product browsing experience  
-- Cart management (add, remove, update quantity)  
-- Order history tracking  
-- Shared state across views for consistent data handling  
+The project separates the interface and data into several SwiftUI views and models, including:
 
----
+- `SplashView`
+- `LoginView`
+- `SignUpView`
+- `StoreSelectionView`
+- `HomeScreen`
+- `ProductDetailView`
+- `CartView`
+- `AccountView`
+- `StoreResetView`
+- `MainTabView`
+- `CartManager`
+- `Store`, `Product`, `CartItem`, `ProductSection`, and `Order` models
 
-## Tech Stack
+## How It Works
 
-- Swift  
-- SwiftUI  
-- Xcode  
+1. The app opens with an animated splash screen.
+2. Users enter credentials or create a local account.
+3. Users select from the included sample stores.
+4. The home screen displays locally defined product categories for the selected store.
+5. Users can open a product, choose a quantity, and add it to the cart.
+6. `CartManager` tracks products, quantities, totals, and order history across views.
+7. Checkout creates a local `Order`, stores it in order history, and clears the cart.
 
----
+## Current Scope
 
-## Architecture
-
-The app uses SwiftUI with shared state management to keep data consistent across multiple views. Core components include:
-
-- Centralized cart management  
-- Navigation-based view structure  
-- Reusable UI components  
-- Local data handling for products and orders  
-
----
-
-## Project Structure
-
-```
-HUCart/
-│── Views/
-│── Models/
-│── ViewModels/
-│── Assets/
-│── HUCartApp.swift
-```
-
----
-
-## Getting Started
-
-1. Clone the repository:
-```
-git clone https://github.com/SilentRequiem/HUCart.git
-```
-
-2. Open the project in Xcode
-
-3. Run the app on a simulator or device
-
----
-
-## Highlight
-
-Developed an iOS app that helps students buy items online with a user-friendly interface. Implemented features such as user login, store selection, cart management, and order history with efficient state-sharing across views.
-
----
+HUCart is a prototype rather than a production shopping service. The current version does not connect to retailer APIs or databases, process real payments, persist accounts or orders between sessions, or use production-grade authentication.
 
 ## Future Improvements
 
-- Add backend integration for real data  
-- Implement user authentication system  
-- Improve UI/UX design  
-- Add payment functionality  
+- Add backend and database integration
+- Add persistent user accounts and secure authentication
+- Connect to real product or retailer APIs
+- Add payment processing
+- Persist order history between sessions
+- Improve cart quantity editing directly from the cart screen
+- Expand error handling and validation
+- Continue refining UI and accessibility
 
----
+## Running the Project
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/SilentRequiem/HUCart.git
+```
+
+2. Open the Xcode project.
+3. Build and run HUCart on an iOS simulator or compatible device.
+
+## Project Highlight
+
+Built a multi-view iOS shopping prototype that demonstrates SwiftUI navigation, shared application state, reusable data models, cart management, simulated checkout, and local order tracking.
 
 ## License
 
